@@ -1,0 +1,23 @@
+# Datasets, the data lake and trained models: downloaded or regenerated, never committed
+data/
+
+# Large, regenerable model outputs
+reports/**/*.parquet
+
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Editor settings
+.vscode/
+.idea/
+
+# OS
+.DS_Store

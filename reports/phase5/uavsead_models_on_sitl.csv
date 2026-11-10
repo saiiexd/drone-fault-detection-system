@@ -1,0 +1,17 @@
+key,class,in_air_s,alarm_gbt_false,alarm_gbt_f1_false,alarm_rule_false,max_p_mech_before,alarm_gbt_latency_s,type_at_alarm,type_proba,alarm_gbt_f1_latency_s,alarm_rule_latency_s,in_air_after_inject_s,max_p_mech_after
+motor_off_1,Mechanical,72.0,0,0,0,0.0,0.932,External Position,0.91,,1.932,48.6,0.942
+motor_off_2,Mechanical,88.0,0,0,0,0.001,0.644,Normal,0.95,3.644,2.244,64.2,0.992
+motor_off_3,Mechanical,80.60000000000001,0,0,0,0.0,0.936,Normal,0.47,5.936,2.336,57.2,0.987
+motor_off_4,Mechanical,51.800000000000004,0,0,0,0.001,0.756,External Position,0.66,,2.156,28.400000000000002,0.38
+motor_off_5,Mechanical,52.6,0,0,0,0.0,0.556,Normal,0.71,3.156,1.956,31.200000000000003,0.998
+motor_off_6,Mechanical,54.6,0,0,0,0.0,0.724,External Position,0.58,3.124,1.924,28.200000000000003,0.995
+motor_off_7,Mechanical,106.80000000000001,0,0,0,0.0,0.74,External Position,0.59,,2.14,75.4,0.95
+motor_off_8,Mechanical,72.0,0,0,0,0.001,0.648,Normal,0.65,,2.248,35.2,0.463
+nominal_1,Normal,48.800000000000004,0,0,0,0.001,,,,,,,
+nominal_2,Normal,47.2,0,0,0,0.001,,,,,,,
+nominal_3,Normal,48.6,1,0,0,0.003,,,,,,,
+nominal_4,Normal,48.400000000000006,0,0,0,0.0,,,,,,,
+nominal_5,Normal,57.400000000000006,0,0,0,0.001,,,,,,,
+nominal_6,Normal,56.800000000000004,0,0,0,0.0,,,,,,,
+nominal_7,Normal,58.800000000000004,0,0,0,0.0,,,,,,,
+nominal_8,Normal,57.2,0,0,0,0.001,,,,,,,

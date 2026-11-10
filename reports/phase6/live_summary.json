@@ -1,0 +1,19 @@
+{
+  "flights": 16,
+  "fault_flights": 8,
+  "before_impact": 8,
+  "detected": 8,
+  "latency_median_s": 0.10200000000000001,
+  "latency_max_s": 0.128,
+  "margin_median_s": 1.8,
+  "false_alarms": 0,
+  "airborne_neg_h": 0.2038222222222222,
+  "proc_us_p50": 967.786,
+  "proc_us_p99": 2100.3168,
+  "proc_us_max": 6822.241,
+  "frame_gap_ms_p50": 20.0015,
+  "frame_gap_ms_p99": 20.167347499999998,
+  "frames": 70527,
+  "injected_without_effect": 4,
+  "alarms_on_injected_without_effect": 0
+}

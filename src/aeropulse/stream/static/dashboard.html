@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aeropulse live</title>
+<style>
+  :root {
+    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --axis: #c3c2b7; --series: #2a78d6;
+    --good: #0ca30c; --critical: #d03b3b; --warning: #fab219;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781;
+      --grid: #2c2c2a; --axis: #383835; --series: #3987e5;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+         font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display: flex; align-items: center; gap: 16px; padding: 12px 20px; }
+  header h1 { font-size: 16px; font-weight: 600; margin: 0; }
+  header .src { color: var(--ink2); font-size: 13px; }
+  #status { margin-left: auto; display: flex; align-items: center; gap: 8px; padding: 6px 14px;
+            border-radius: 6px; font-weight: 600; color: #fff; background: var(--muted); }
+  #status.good { background: var(--good); }
+  #status.critical { background: var(--critical); }
+  #status svg { width: 16px; height: 16px; }
+  .tiles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; padding: 0 20px 12px; }
+  .tile { background: var(--surface); border-radius: 8px; padding: 10px 14px; }
+  .tile .k { color: var(--ink2); font-size: 12px; }
+  .tile .v { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 0 20px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .tiles { grid-template-columns: repeat(2, 1fr); } }
+  .chart { background: var(--surface); border-radius: 8px; padding: 10px 12px 6px; position: relative; }
+  .chart h2 { font-size: 13px; font-weight: 600; margin: 0 0 4px; }
+  .chart h2 span { color: var(--ink2); font-weight: 400; }
+  canvas { width: 100%; height: 150px; display: block; }
+  .tip { position: absolute; pointer-events: none; background: var(--surface); color: var(--ink);
+         border: 1px solid var(--axis); border-radius: 4px; padding: 3px 7px; font-size: 12px;
+         font-variant-numeric: tabular-nums; display: none; white-space: nowrap; }
+  section.alarms { padding: 12px 20px 24px; }
+  section.alarms h2 { font-size: 13px; margin: 0 0 6px; }
+  table { border-collapse: collapse; width: 100%; background: var(--surface); border-radius: 8px; }
+  th, td { text-align: left; padding: 6px 12px; font-variant-numeric: tabular-nums; }
+  th { color: var(--ink2); font-weight: 500; font-size: 12px; border-bottom: 1px solid var(--grid); }
+  td.empty { color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>aeropulse: live motor-failure detection</h1>
+  <span class="src" id="src">connecting…</span>
+  <div id="status" role="status" aria-live="assertive"><span id="status-text">Waiting for telemetry</span></div>
+</header>
+
+<div class="tiles">
+  <div class="tile"><div class="k">Altitude</div><div class="v" id="t-alt">–</div></div>
+  <div class="tile"><div class="k">Failure score (threshold <span id="t-thr">–</span>)</div><div class="v" id="t-score">–</div></div>
+  <div class="tile"><div class="k">Flight state</div><div class="v" id="t-state">–</div></div>
+  <div class="tile"><div class="k">Detector time per frame</div><div class="v" id="t-proc">–</div></div>
+  <div class="tile"><div class="k">Push delay to browser</div><div class="v" id="t-push">–</div></div>
+</div>
+
+<div class="grid">
+  <div class="chart"><h2>Failure evidence <span>log<sub>10</sub> odds of the model probability; dashed line = alarm threshold</span></h2><canvas id="c-score"></canvas><div class="tip"></div></div>
+  <div class="chart"><h2>Altitude <span>m above takeoff point</span></h2><canvas id="c-alt"></canvas><div class="tip"></div></div>
+  <div class="chart"><h2>Attitude-tracking error <span>deg between commanded and actual thrust axis</span></h2><canvas id="c-err"></canvas><div class="tip"></div></div>
+  <div class="chart"><h2>Thrust demand <span>controller output, 0–1</span></h2><canvas id="c-thr"></canvas><div class="tip"></div></div>
+</div>
+
+<section class="alarms">
+  <h2>Alarms</h2>
+  <table><thead><tr><th>Session</th><th>Autopilot time (s)</th><th>Peak score</th><th>Repeats</th><th>Wall clock</th></tr></thead>
+  <tbody id="alarms"><tr><td class="empty" colspan="5">No alarms</td></tr></tbody></table>
+</section>
+
+<script>
+const SPAN_S = 20, STATES = {1: "On ground", 2: "In air", 3: "Taking off", 4: "Landing"};
+// Probabilities near 1 are unreadable on a 0-1 axis (the threshold is ~0.9999),
+// so the score chart uses log10 odds, clipped to +-6.
+const lodds = p => Number.isFinite(p) ? Math.max(-6, Math.min(6, Math.log10(Math.max(p, 1e-9) / Math.max(1 - p, 1e-9)))) : NaN;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const buf = [];                  // {t, score, alt, tilt_err, thrust_sp, alarm}
+let threshold = null, session = null;
+
+const charts = [
+  {id: "c-score", key: "lodds", min: -6, max: 6, fmt: v => v.toFixed(1), thr: true},
+  {id: "c-alt", key: "alt", min: 0, fmt: v => v.toFixed(1) + " m"},
+  {id: "c-err", key: "tilt_err", min: 0, fmt: v => v.toFixed(1) + "°"},
+  {id: "c-thr", key: "thrust_sp", min: 0, max: 1, fmt: v => v.toFixed(2)},
+];
+for (const c of charts) {
+  c.cv = document.getElementById(c.id); c.tip = c.cv.parentElement.querySelector(".tip");
+  c.hover = null;
+  c.cv.addEventListener("mousemove", e => { const r = c.cv.getBoundingClientRect(); c.hover = e.clientX - r.left; draw(c); });
+  c.cv.addEventListener("mouseleave", () => { c.hover = null; c.tip.style.display = "none"; draw(c); });
+}
+
+function draw(c) {
+  const dpr = window.devicePixelRatio || 1, W = c.cv.clientWidth, H = c.cv.clientHeight;
+  if (c.cv.width !== W * dpr) { c.cv.width = W * dpr; c.cv.height = H * dpr; }
+  const g = c.cv.getContext("2d"); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+  const L = 44, R = 8, T = 6, B = 18, pw = W - L - R, ph = H - T - B;
+  const pts = buf.filter(p => Number.isFinite(p[c.key]));
+  const tEnd = buf.length ? buf[buf.length - 1].t : 0, t0 = tEnd - SPAN_S;
+  let lo = c.min ?? Math.min(...pts.map(p => p[c.key])), hi = c.max;
+  if (hi === undefined) hi = Math.max(1, ...pts.map(p => p[c.key])) * 1.1;
+  const x = t => L + (t - t0) / SPAN_S * pw, y = v => T + ph - (v - lo) / (hi - lo) * ph;
+  // recessive grid + axis labels
+  g.font = "11px system-ui"; g.fillStyle = css("--muted"); g.strokeStyle = css("--grid"); g.lineWidth = 1;
+  for (let i = 0; i <= 2; i++) {
+    const v = lo + (hi - lo) * i / 2, yy = Math.round(y(v)) + 0.5;
+    g.beginPath(); g.moveTo(L, yy); g.lineTo(W - R, yy); g.stroke();
+    g.textAlign = "right"; g.fillText(c.fmt(v).replace(/ m|°/, ""), L - 6, i === 0 ? yy : yy + 4);
+  }
+  for (let s = 0; s <= SPAN_S; s += 5) {   // end labels aligned inward so they never clip or collide
+    g.textAlign = s === 0 ? "left" : s === SPAN_S ? "right" : "center";
+    g.fillText(s === SPAN_S ? "now" : `-${SPAN_S - s} s`, x(t0 + s) + (s === 0 ? 2 : 0), H - 2);
+  }
+  // alarm periods: critical tint behind the data
+  g.fillStyle = css("--critical"); g.globalAlpha = 0.15;
+  for (let i = 0; i < buf.length; i++) if (buf[i].alarm) {
+    const xa = x(buf[i].t), xb = i + 1 < buf.length ? x(buf[i + 1].t) : xa + 2;
+    g.fillRect(xa, T, Math.max(1, xb - xa), ph);
+  }
+  g.globalAlpha = 1;
+  if (c.thr && threshold !== null) {
+    g.strokeStyle = css("--ink2"); g.setLineDash([4, 4]); g.beginPath();
+    g.moveTo(L, y(lodds(threshold))); g.lineTo(W - R, y(lodds(threshold))); g.stroke(); g.setLineDash([]);
+  }
+  g.strokeStyle = css("--series"); g.lineWidth = 2; g.lineJoin = "round"; g.beginPath();
+  let started = false;
+  for (const p of pts) { const xx = x(p.t), yy = y(Math.min(hi, Math.max(lo, p[c.key])));
+    if (!started) { g.moveTo(xx, yy); started = true; } else g.lineTo(xx, yy); }
+  g.stroke();
+  // crosshair + tooltip
+  if (c.hover !== null && pts.length) {
+    const th = t0 + (c.hover - L) / pw * SPAN_S;
+    let best = pts[0]; for (const p of pts) if (Math.abs(p.t - th) < Math.abs(best.t - th)) best = p;
+    const xx = x(best.t), yy = y(Math.min(hi, Math.max(lo, best[c.key])));
+    g.strokeStyle = css("--axis"); g.lineWidth = 1; g.beginPath(); g.moveTo(xx, T); g.lineTo(xx, T + ph); g.stroke();
+    g.fillStyle = css("--series"); g.strokeStyle = css("--surface"); g.lineWidth = 2;
+    g.beginPath(); g.arc(xx, yy, 4, 0, 7); g.fill(); g.stroke();
+    c.tip.textContent = `${(best.t - tEnd).toFixed(1)} s · ${c.fmt(best[c.key])}${best.alarm ? " · ALARM" : ""}`;
+    c.tip.style.display = "block";
+    c.tip.style.left = Math.min(W - 150, xx + 16) + "px"; c.tip.style.top = "28px";
+  }
+}
+
+const ICON_OK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg>';
+const ICON_ALARM = '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l7 13H1z"/><rect x="7.2" y="5.5" width="1.6" height="4.5" fill="#fff"/><rect x="7.2" y="11" width="1.6" height="1.6" fill="#fff"/></svg>';
+
+function setStatus(rec) {
+  const el = document.getElementById("status");
+  if (rec.alarm) { el.className = "critical"; el.innerHTML = ICON_ALARM + "<span>MOTOR FAILURE</span>"; }
+  else if (rec.airborne) { el.className = "good"; el.innerHTML = ICON_OK + "<span>Nominal</span>"; }
+  else { el.className = ""; el.innerHTML = "<span>On ground / not armed</span>"; }
+}
+
+// One row per alarm episode. After a crash the wreck's telemetry makes the
+// alarm flicker; onsets within EPISODE_S of the previous one are counted in
+// the same row instead of filling the table. (Only the display groups them:
+// the detector and decisions.jsonl keep every onset.)
+const EPISODE_S = 10, episodes = [];
+function addAlarm(rec) {
+  const t = rec.t_us / 1e6, last = episodes[0];
+  if (last && last.session === rec.session && t - last.tLast <= EPISODE_S) {
+    last.tLast = t; last.repeats += 1; last.score = Math.max(last.score, rec.score);
+  } else {
+    episodes.unshift({session: rec.session, t, tLast: t, score: rec.score, repeats: 0,
+                      wall: new Date().toLocaleTimeString()});
+  }
+  document.getElementById("alarms").innerHTML = episodes.slice(0, 20).map(e =>
+    `<tr><td>${e.session}</td><td>${e.t.toFixed(2)}</td><td>${e.score.toPrecision(5)}</td>` +
+    `<td>${e.repeats}</td><td>${e.wall}</td></tr>`).join("");
+}
+
+function onRecord(rec) {
+  if (session !== rec.session) { buf.length = 0; session = rec.session; }
+  const d = rec.display;
+  buf.push({t: rec.t_us / 1e6, score: rec.score, lodds: lodds(rec.score), alt: d.alt, tilt_err: d.tilt_err, thrust_sp: d.thrust_sp, alarm: rec.alarm});
+  while (buf.length && buf[0].t < buf[buf.length - 1].t - SPAN_S) buf.shift();
+  document.getElementById("t-alt").textContent = Number.isFinite(d.alt) ? d.alt.toFixed(1) + " m" : "–";
+  document.getElementById("t-score").textContent = Number.isFinite(rec.score) ? rec.score.toPrecision(4) : "–";
+  document.getElementById("t-state").textContent = rec.airborne ? "In air" : "On ground";
+  document.getElementById("t-proc").textContent = rec.proc_us.toFixed(0) + " µs";
+  // push_ns and the browser's receive time are on different clocks, so the
+  // delay shown is server-side only: frame received -> handed to the socket.
+  document.getElementById("t-push").textContent = ((rec.push_ns - rec.rx_ns) / 1e6).toFixed(1) + " ms";
+  if (rec.onset) addAlarm(rec);
+  setStatus(rec);
+}
+
+let pending = false;
+function schedule() { if (!pending) { pending = true; requestAnimationFrame(() => { pending = false; charts.forEach(draw); }); } }
+
+function connect() {
+  const ws = new WebSocket(`ws://${location.host}/ws`);
+  ws.onmessage = ev => {
+    const m = JSON.parse(ev.data);
+    if (m.hello) { setMeta(m); return; }
+    onRecord(m); schedule();
+  };
+  ws.onclose = () => { document.getElementById("src").textContent = "disconnected, retrying…"; setTimeout(connect, 1000); };
+}
+function setMeta(m) {
+  threshold = m.threshold;
+  document.getElementById("t-thr").textContent = threshold != null ? threshold.toPrecision(4) : "–";
+  document.getElementById("src").textContent = m.source ?? "";
+}
+const BOOT = /*BOOT*/null;
+if (BOOT) { setMeta(BOOT); for (const r of BOOT.history) onRecord(r); charts.forEach(draw); }
+connect();
+window.addEventListener("resize", schedule);
+</script>
+</body>
+</html>

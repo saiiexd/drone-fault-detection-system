@@ -1,0 +1,17 @@
+key,fault,injected,motor_cmd_after,ca_failure_mode,takeoff_alt_m,frames,time_to_impact_s,latency_s,margin_s,before_impact,false_alarms,airborne_neg_s
+live_motor_off_1,True,True,0.0,1,17.6,3537,1.96,0.1,1.86,True,0,22.14
+live_motor_off_2,True,True,0.0,1,13.6,5145,1.6,0.1,1.5,True,0,25.36
+live_motor_off_3,True,True,0.0,1,24.4,5453,2.188,0.108,2.08,True,0,31.46
+live_motor_off_4,True,True,0.0,1,18.3,5258,1.816,0.096,1.72,True,0,28.060000000000002
+live_motor_off_5,True,True,0.0,1,9.5,5237,1.44,0.1,1.34,True,0,27.16
+live_motor_off_6,True,True,0.0,1,24.0,5151,2.312,0.112,2.2,True,0,25.96
+live_motor_off_7,True,True,0.0,1,19.6,5342,2.044,0.104,1.94,True,0,29.26
+live_motor_off_8,True,True,0.0,1,16.1,5596,1.868,0.128,1.74,True,0,34.36
+live_motor_off_9,False,True,0.7888645529747009,0,23.3,3856,,,,,0,66.0
+live_motor_off_10,False,True,0.760403037071228,0,15.0,2906,,,,,0,47.0
+live_motor_off_11,False,True,0.7398340702056885,0,14.4,2999,,,,,0,50.0
+live_motor_off_12,False,True,0.7443236708641052,0,29.3,4206,,,,,0,74.0
+live_nominal_1,False,False,,1,16.9,4356,,,,,0,76.0
+live_nominal_2,False,False,,1,8.4,3590,,,,,0,61.0
+live_nominal_3,False,False,,1,17.1,4140,,,,,0,72.0
+live_nominal_4,False,False,,1,10.2,3755,,,,,0,64.0

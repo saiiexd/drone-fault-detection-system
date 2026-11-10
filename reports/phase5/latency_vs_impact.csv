@@ -1,0 +1,9 @@
+key,alt_at_inject_m,t_impact_s,latency_gbt_s,latency_gbt_f1_s,latency_rule_s,type_at_alarm,before_impact
+motor_off_1,9.7,1.43,0.932,,1.932,External Position,True
+motor_off_2,10.6,1.42,0.644,3.644,2.244,Normal,True
+motor_off_3,8.6,1.36,0.936,5.936,2.336,Normal,True
+motor_off_4,10.2,1.36,0.756,,2.156,External Position,True
+motor_off_5,8.8,1.36,0.556,3.156,1.956,Normal,True
+motor_off_6,7.3,1.24,0.724,3.124,1.924,External Position,True
+motor_off_7,10.2,1.48,0.74,,2.14,External Position,True
+motor_off_8,11.2,1.63,0.648,,2.248,Normal,True

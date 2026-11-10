@@ -1,0 +1,21 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Install
+        run: uv sync --locked --python 3.12
+      - name: Lint
+        run: uv run ruff check src scripts tests
+      - name: Test
+        # Tests that need downloaded data or simulator logs skip themselves.
+        run: uv run pytest -q

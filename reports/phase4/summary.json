@@ -1,0 +1,46 @@
+{
+  "windows": 783610,
+  "flights": 1176,
+  "sessions": 139,
+  "positives": 39629,
+  "type_macro_f1": 0.4626851093957679,
+  "type_accuracy_given_anomaly": 0.3586767266395821,
+  "type_per_class": {
+    "Normal": {
+      "precision": 0.9678769513486659,
+      "recall": 0.9741162744747514,
+      "f1-score": 0.9709865899228141,
+      "support": 743981.0
+    },
+    "Mechanical": {
+      "precision": 0.5518358531317494,
+      "recall": 0.5933236574746009,
+      "f1-score": 0.5718282277241572,
+      "support": 3445.0
+    },
+    "Global Position": {
+      "precision": 0.21279092509290046,
+      "recall": 0.1081188512372056,
+      "f1-score": 0.143384290985767,
+      "support": 10063.0
+    },
+    "Altitude": {
+      "precision": 0.09648377781552574,
+      "recall": 0.07611900294827124,
+      "f1-score": 0.08510000749119784,
+      "support": 7462.0
+    },
+    "External Position": {
+      "precision": 0.5223309652739828,
+      "recall": 0.5634814298729836,
+      "f1-score": 0.5421264308549035,
+      "support": 18659.0
+    }
+  },
+  "final_model": {
+    "path": "data/models/uavsead_gbt.joblib",
+    "threshold_f1": 0.6820595824661978,
+    "threshold_fa": 0.8367234898237341
+  },
+  "runtime_s": 605.8
+}

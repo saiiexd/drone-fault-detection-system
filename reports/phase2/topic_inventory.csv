@@ -1,0 +1,319 @@
+flight,class,instance,n_msgs,n_fields,rate_hz,jitter_p95_over_median,max_gap_ms
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,actuator_controls_0_0,233,9,9.994,1.040,208.077
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,actuator_outputs_0,233,17,9.280,1.048,199.673
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,actuator_outputs_1,233,17,9.862,1.027,206.073
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,battery_status_0,48,20,1.984,1.002,624.797
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,cpuload_0,24,2,0.997,1.012,1296.778
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,distance_sensor_0,445,7,19.626,1.040,150.699
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,ekf2_innovations_0,117,39,4.906,1.004,308.070
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,ekf2_timestamps_0,5896,8,250.000,1.010,140.007
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,estimator_status_0,117,71,4.906,1.005,308.070
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,input_rc_0,117,27,4.993,1.107,312.027
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,manual_control_setpoint_0,117,25,4.991,1.098,312.027
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,rate_ctrl_status_0,747,7,31.257,1.004,168.055
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,safety_0,1066,4,42.230,1.019,136.019
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,sensor_combined_0,5896,9,250.000,1.010,140.007
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,sensor_preflight_0,6,3,4.911,100.944,25641.988
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,system_power_0,48,9,2.000,1.020,619.998
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,telemetry_status_0,28,12,1.001,1.005,1004.701
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,timesync_status_0,239,4,9.993,1.047,112.691
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_air_data_0,1606,4,86.430,2.056,141.928
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_attitude_0,746,12,31.267,1.015,159.831
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_attitude_setpoint_0,233,17,9.961,1.038,208.062
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_command_0,2,14,,,
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_gps_position_0,475,22,19.992,1.036,100.305
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_land_detected_0,27,5,0.989,1.009,1020.532
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_local_position_0,233,42,9.986,1.040,203.964
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_local_position_setpoint_0,39,14,9.956,1.039,104.570
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_magnetometer_0,2362,3,100.000,1.004,139.979
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_rates_setpoint_0,745,4,31.256,1.004,160.007
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_status_0,28,22,0.995,1.006,1011.406
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_status_flags_0,28,27,0.995,1.006,1011.406
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_vision_attitude_0,238,12,10.001,1.400,199.935
+2018-08-31-09.01/part2/2018-09-01/19_48_12,Normal,vehicle_vision_position_0,238,42,10.001,1.400,199.935
+2018-07-__/sess015/log002,Normal,actuator_controls_0_0,268,9,9.916,1.032,5051.965
+2018-07-__/sess015/log002,Normal,actuator_outputs_0,268,17,9.469,1.097,5064.690
+2018-07-__/sess015/log002,Normal,actuator_outputs_1,268,17,9.866,1.034,5053.284
+2018-07-__/sess015/log002,Normal,battery_status_0,56,20,1.983,1.009,4958.647
+2018-07-__/sess015/log002,Normal,cpuload_0,29,2,0.996,1.055,5010.343
+2018-07-__/sess015/log002,Normal,ekf2_innovations_0,135,39,4.989,1.050,5061.830
+2018-07-__/sess015/log002,Normal,estimator_status_0,135,71,4.988,1.049,5061.830
+2018-07-__/sess015/log002,Normal,input_rc_0,135,27,4.988,1.098,5064.532
+2018-07-__/sess015/log002,Normal,manual_control_setpoint_0,135,25,4.988,1.101,5064.532
+2018-07-__/sess015/log002,Normal,optical_flow_0,262,15,9.502,1.017,4944.955
+2018-07-__/sess015/log002,Normal,position_setpoint_triplet_0,53,96,4.999,1.293,300.800
+2018-07-__/sess015/log002,Normal,rate_ctrl_status_0,860,7,31.251,1.026,4955.191
+2018-07-__/sess015/log002,Normal,safety_0,1229,4,42.958,1.053,4951.729
+2018-07-__/sess015/log002,Normal,sensor_combined_0,6647,9,250.000,1.012,4955.200
+2018-07-__/sess015/log002,Normal,sensor_preflight_0,6,3,4.902,125.250,31884.715
+2018-07-__/sess015/log002,Normal,system_power_0,56,9,2.000,1.020,4959.968
+2018-07-__/sess015/log002,Normal,telemetry_status_0,41,12,1.009,1.026,5000.826
+2018-07-__/sess015/log002,Normal,timesync_status_0,274,4,9.993,1.335,5015.966
+2018-07-__/sess015/log002,Normal,vehicle_air_data_0,1863,4,89.880,2.060,4954.987
+2018-07-__/sess015/log002,Normal,vehicle_attitude_0,861,12,31.250,1.025,4955.200
+2018-07-__/sess015/log002,Normal,vehicle_attitude_setpoint_0,268,17,9.970,1.099,5051.780
+2018-07-__/sess015/log002,Normal,vehicle_command_0,2,14,,,
+2018-07-__/sess015/log002,Normal,vehicle_land_detected_0,30,5,0.989,1.008,4817.653
+2018-07-__/sess015/log002,Normal,vehicle_local_position_0,268,42,9.979,1.100,5051.685
+2018-07-__/sess015/log002,Normal,vehicle_local_position_setpoint_0,102,14,9.977,1.100,291.263
+2018-07-__/sess015/log002,Normal,vehicle_magnetometer_0,2721,3,100.000,1.004,4959.979
+2018-07-__/sess015/log002,Normal,vehicle_rates_setpoint_0,860,4,31.251,1.026,4955.165
+2018-07-__/sess015/log002,Normal,vehicle_status_0,32,22,0.995,1.005,5535.834
+2018-07-__/sess015/log002,Normal,vehicle_status_flags_0,32,27,0.995,1.005,5535.833
+2018-07-__/sess015/log002,Normal,vehicle_vision_attitude_0,717,12,29.536,1.996,4924.141
+2018-07-__/sess015/log002,Normal,vehicle_vision_position_0,717,42,29.505,1.989,4924.141
+2019-03-06/07_59_53,Normal,actuator_controls_0_0,5929,9,249.813,1.023,7.965
+2019-03-06/07_59_53,Normal,actuator_outputs_0,234,17,9.589,1.111,120.405
+2019-03-06/07_59_53,Normal,actuator_outputs_1,234,17,9.855,1.026,106.863
+2019-03-06/07_59_53,Normal,battery_status_0,48,20,1.984,1.000,505.624
+2019-03-06/07_59_53,Normal,cpuload_0,24,2,0.998,1.003,1007.970
+2019-03-06/07_59_53,Normal,distance_sensor_0,234,7,9.618,1.012,155.703
+2019-03-06/07_59_53,Normal,ekf2_innovations_0,118,39,4.904,1.002,205.509
+2019-03-06/07_59_53,Normal,estimator_status_0,118,71,4.905,1.003,205.509
+2019-03-06/07_59_53,Normal,input_rc_0,118,27,4.995,1.099,224.326
+2019-03-06/07_59_53,Normal,manual_control_setpoint_0,118,25,4.995,1.098,224.312
+2019-03-06/07_59_53,Normal,mission_result_0,2,14,,,
+2019-03-06/07_59_53,Normal,optical_flow_0,229,15,9.616,1.005,105.502
+2019-03-06/07_59_53,Normal,ping_0,24,6,0.999,1.011,1076.771
+2019-03-06/07_59_53,Normal,position_setpoint_triplet_0,2,96,,,
+2019-03-06/07_59_53,Normal,rate_ctrl_status_0,749,7,31.253,1.003,32.870
+2019-03-06/07_59_53,Normal,safety_0,1070,4,42.185,1.021,24.662
+2019-03-06/07_59_53,Normal,sensor_combined_0,5927,9,250.000,1.010,12.020
+2019-03-06/07_59_53,Normal,sensor_preflight_0,6,3,4.896,90.767,23123.264
+2019-03-06/07_59_53,Normal,system_power_0,48,9,2.000,1.020,510.042
+2019-03-06/07_59_53,Normal,telemetry_status_0,25,12,1.000,1.018,1039.953
+2019-03-06/07_59_53,Normal,timesync_status_0,239,4,10.001,1.064,119.867
+2019-03-06/07_59_53,Normal,vehicle_attitude_0,749,12,31.259,1.013,32.586
+2019-03-06/07_59_53,Normal,vehicle_attitude_setpoint_0,234,17,9.953,1.038,104.721
+2019-03-06/07_59_53,Normal,vehicle_command_0,3,14,0.099,1.802,19099.330
+2019-03-06/07_59_53,Normal,vehicle_gps_position_0,96,22,4.917,1.481,303.771
+2019-03-06/07_59_53,Normal,vehicle_land_detected_0,25,5,0.983,1.003,1020.471
+2019-03-06/07_59_53,Normal,vehicle_local_position_0,234,42,9.983,1.041,104.553
+2019-03-06/07_59_53,Normal,vehicle_local_position_setpoint_0,234,14,9.950,1.037,104.782
+2019-03-06/07_59_53,Normal,vehicle_rates_setpoint_0,748,4,31.253,1.003,33.624
+2019-03-06/07_59_53,Normal,vehicle_status_0,25,22,0.993,1.005,1012.217
+2019-03-06/07_59_53,Normal,vehicle_status_flags_0,25,27,0.993,1.005,1012.217
+2019-03-06/07_59_53,Normal,vehicle_vision_attitude_0,238,12,9.999,1.033,196.727
+2019-03-06/07_59_53,Normal,vehicle_vision_position_0,238,42,9.999,1.033,196.726
+2019-04-12/10_19_40,Normal,actuator_controls_0_0,6110,9,249.875,1.025,11.990
+2019-04-12/10_19_40,Normal,actuator_outputs_0,241,17,9.562,1.107,119.739
+2019-04-12/10_19_40,Normal,actuator_outputs_1,241,17,9.855,1.026,105.598
+2019-04-12/10_19_40,Normal,battery_status_0,49,20,1.984,1.002,505.349
+2019-04-12/10_19_40,Normal,cpuload_0,25,2,0.998,1.015,1173.185
+2019-04-12/10_19_40,Normal,distance_sensor_0,241,7,9.615,1.017,108.444
+2019-04-12/10_19_40,Normal,ekf2_innovations_0,121,39,4.905,1.004,205.286
+2019-04-12/10_19_40,Normal,estimator_status_0,121,71,4.905,1.004,205.286
+2019-04-12/10_19_40,Normal,input_rc_0,121,27,4.991,1.098,223.819
+2019-04-12/10_19_40,Normal,manual_control_setpoint_0,121,25,4.991,1.081,224.030
+2019-04-12/10_19_40,Normal,mission_result_0,2,14,,,
+2019-04-12/10_19_40,Normal,optical_flow_0,236,15,9.614,1.009,106.084
+2019-04-12/10_19_40,Normal,ping_0,25,6,1.003,1.013,1109.600
+2019-04-12/10_19_40,Normal,position_setpoint_triplet_0,2,96,,,
+2019-04-12/10_19_40,Normal,rate_ctrl_status_0,775,7,31.257,1.004,36.018
+2019-04-12/10_19_40,Normal,safety_0,1105,4,42.232,1.023,24.726
+2019-04-12/10_19_40,Normal,sensor_combined_0,6110,9,250.000,1.010,11.992
+2019-04-12/10_19_40,Normal,sensor_preflight_0,6,3,4.896,94.069,23963.922
+2019-04-12/10_19_40,Normal,system_power_0,49,9,2.000,1.020,510.025
+2019-04-12/10_19_40,Normal,telemetry_status_0,26,12,1.001,1.016,1052.974
+2019-04-12/10_19_40,Normal,timesync_status_0,246,4,9.998,1.045,108.305
+2019-04-12/10_19_40,Normal,vehicle_attitude_0,774,12,31.267,1.015,35.720
+2019-04-12/10_19_40,Normal,vehicle_attitude_setpoint_0,241,17,9.964,1.041,106.045
+2019-04-12/10_19_40,Normal,vehicle_command_0,3,14,0.106,1.813,17918.070
+2019-04-12/10_19_40,Normal,vehicle_land_detected_0,26,5,0.985,1.005,1020.661
+2019-04-12/10_19_40,Normal,vehicle_local_position_0,241,42,9.986,1.042,105.172
+2019-04-12/10_19_40,Normal,vehicle_local_position_setpoint_0,241,14,9.965,1.041,106.046
+2019-04-12/10_19_40,Normal,vehicle_rates_setpoint_0,774,4,31.255,1.004,35.994
+2019-04-12/10_19_40,Normal,vehicle_status_0,27,22,0.996,1.005,1011.206
+2019-04-12/10_19_40,Normal,vehicle_status_flags_0,27,27,0.996,1.005,1011.204
+2019-04-12/10_19_40,Normal,vehicle_vision_attitude_0,246,12,10.001,1.024,107.264
+2019-04-12/10_19_40,Normal,vehicle_vision_position_0,246,42,10.001,1.024,107.264
+2019-01-15/07_28_00,Mechanical,actuator_controls_0_0,11646,9,249.875,1.023,7.998
+2019-01-15/07_28_00,Mechanical,actuator_outputs_0,460,17,9.519,1.104,120.212
+2019-01-15/07_28_00,Mechanical,actuator_outputs_1,460,17,9.855,1.025,106.375
+2019-01-15/07_28_00,Mechanical,battery_status_0,94,20,1.981,1.001,505.979
+2019-01-15/07_28_00,Mechanical,cpuload_0,47,2,0.998,1.002,1006.095
+2019-01-15/07_28_00,Mechanical,distance_sensor_0,460,7,9.854,1.025,153.371
+2019-01-15/07_28_00,Mechanical,ekf2_innovations_0,231,39,4.912,1.006,205.426
+2019-01-15/07_28_00,Mechanical,estimator_status_0,231,71,4.910,1.006,205.426
+2019-01-15/07_28_00,Mechanical,input_rc_0,231,27,4.995,1.099,224.754
+2019-01-15/07_28_00,Mechanical,manual_control_setpoint_0,231,25,4.992,1.097,224.050
+2019-01-15/07_28_00,Mechanical,ping_0,48,6,0.998,1.012,1070.358
+2019-01-15/07_28_00,Mechanical,position_setpoint_triplet_0,32,96,4.996,1.094,220.600
+2019-01-15/07_28_00,Mechanical,rate_ctrl_status_0,1477,7,31.254,1.005,32.930
+2019-01-15/07_28_00,Mechanical,safety_0,2106,4,42.233,1.024,25.096
+2019-01-15/07_28_00,Mechanical,sensor_combined_0,11646,9,250.000,1.012,8.048
+2019-01-15/07_28_00,Mechanical,sensor_preflight_0,6,3,4.921,181.805,46131.756
+2019-01-15/07_28_00,Mechanical,system_power_0,94,9,2.000,1.020,510.040
+2019-01-15/07_28_00,Mechanical,telemetry_status_0,47,12,1.000,1.009,1081.488
+2019-01-15/07_28_00,Mechanical,timesync_status_0,468,4,10.001,1.062,127.646
+2019-01-15/07_28_00,Mechanical,vehicle_attitude_0,1477,12,31.259,1.017,33.298
+2019-01-15/07_28_00,Mechanical,vehicle_attitude_setpoint_0,460,17,9.941,1.040,105.509
+2019-01-15/07_28_00,Mechanical,vehicle_command_0,3,14,0.064,1.848,30258.273
+2019-01-15/07_28_00,Mechanical,vehicle_land_detected_0,49,5,0.992,1.008,1019.966
+2019-01-15/07_28_00,Mechanical,vehicle_local_position_0,460,42,9.934,1.037,105.150
+2019-01-15/07_28_00,Mechanical,vehicle_local_position_setpoint_0,356,14,9.930,1.039,105.509
+2019-01-15/07_28_00,Mechanical,vehicle_rates_setpoint_0,1475,4,31.254,1.004,32.925
+2019-01-15/07_28_00,Mechanical,vehicle_status_0,50,22,0.994,1.005,1011.431
+2019-01-15/07_28_00,Mechanical,vehicle_status_flags_0,50,27,0.994,1.005,1011.431
+2019-01-15/07_28_00,Mechanical,vehicle_vision_attitude_0,1076,12,21.877,1.777,138.989
+2019-01-15/07_28_00,Mechanical,vehicle_vision_position_0,1076,42,21.877,1.777,138.989
+2019-01-07/08_40_52,Mechanical,actuator_controls_0_0,22246,9,249.938,1.026,7.940
+2019-01-07/08_40_52,Mechanical,actuator_outputs_0,877,17,9.289,1.077,120.332
+2019-01-07/08_40_52,Mechanical,actuator_outputs_1,876,17,9.841,1.024,106.087
+2019-01-07/08_40_52,Mechanical,battery_status_0,178,20,1.984,1.002,505.392
+2019-01-07/08_40_52,Mechanical,cpuload_0,89,2,0.997,1.005,1008.674
+2019-01-07/08_40_52,Mechanical,distance_sensor_0,876,7,9.615,1.019,156.671
+2019-01-07/08_40_52,Mechanical,ekf2_innovations_0,440,39,4.905,1.002,205.336
+2019-01-07/08_40_52,Mechanical,estimator_status_0,440,71,4.905,1.003,205.336
+2019-01-07/08_40_52,Mechanical,input_rc_0,440,27,4.996,1.099,224.186
+2019-01-07/08_40_52,Mechanical,manual_control_setpoint_0,440,25,4.995,1.099,228.310
+2019-01-07/08_40_52,Mechanical,optical_flow_0,857,15,9.614,1.005,105.387
+2019-01-07/08_40_52,Mechanical,ping_0,90,6,1.000,1.013,1078.319
+2019-01-07/08_40_52,Mechanical,position_setpoint_triplet_0,255,96,4.993,1.118,296.486
+2019-01-07/08_40_52,Mechanical,rate_ctrl_status_0,2812,7,31.255,1.004,33.061
+2019-01-07/08_40_52,Mechanical,safety_0,4008,4,42.210,1.026,24.799
+2019-01-07/08_40_52,Mechanical,sensor_combined_0,22246,9,250.000,1.009,8.001
+2019-01-07/08_40_52,Mechanical,sensor_preflight_0,6,3,4.908,347.471,88450.633
+2019-01-07/08_40_52,Mechanical,system_power_0,178,9,2.000,1.020,510.043
+2019-01-07/08_40_52,Mechanical,telemetry_status_0,90,12,1.000,1.007,1029.229
+2019-01-07/08_40_52,Mechanical,timesync_status_0,891,4,9.997,1.048,112.465
+2019-01-07/08_40_52,Mechanical,vehicle_attitude_0,2809,12,31.263,1.014,32.998
+2019-01-07/08_40_52,Mechanical,vehicle_attitude_setpoint_0,876,17,9.955,1.039,105.013
+2019-01-07/08_40_52,Mechanical,vehicle_command_0,3,14,0.076,1.824,25119.688
+2019-01-07/08_40_52,Mechanical,vehicle_land_detected_0,90,5,0.982,1.003,1021.901
+2019-01-07/08_40_52,Mechanical,vehicle_local_position_0,876,42,9.984,1.042,104.996
+2019-01-07/08_40_52,Mechanical,vehicle_local_position_setpoint_0,749,14,9.954,1.038,104.991
+2019-01-07/08_40_52,Mechanical,vehicle_rates_setpoint_0,2808,4,31.253,1.003,32.864
+2019-01-07/08_40_52,Mechanical,vehicle_status_0,91,22,0.993,1.004,1013.179
+2019-01-07/08_40_52,Mechanical,vehicle_status_flags_0,91,27,0.993,1.004,1013.173
+2019-01-07/08_40_52,Mechanical,vehicle_vision_attitude_0,1704,12,20.236,2.188,192.732
+2019-01-07/08_40_52,Mechanical,vehicle_vision_position_0,1704,42,20.236,2.188,192.732
+2018-09-03/2016-02-11/19_35_56,External Position,actuator_controls_0_0,247,9,9.990,1.040,104.884
+2018-09-03/2016-02-11/19_35_56,External Position,actuator_outputs_0,248,17,9.283,1.077,120.620
+2018-09-03/2016-02-11/19_35_56,External Position,actuator_outputs_1,248,17,9.830,1.027,107.453
+2018-09-03/2016-02-11/19_35_56,External Position,battery_status_0,51,20,1.984,1.002,505.473
+2018-09-03/2016-02-11/19_35_56,External Position,cpuload_0,26,2,0.997,1.006,1012.434
+2018-09-03/2016-02-11/19_35_56,External Position,distance_sensor_0,460,7,19.602,1.979,154.989
+2018-09-03/2016-02-11/19_35_56,External Position,ekf2_innovations_0,125,39,4.908,1.005,205.432
+2018-09-03/2016-02-11/19_35_56,External Position,ekf2_timestamps_0,6272,8,250.000,1.011,8.817
+2018-09-03/2016-02-11/19_35_56,External Position,estimator_status_0,125,71,4.907,1.004,205.304
+2018-09-03/2016-02-11/19_35_56,External Position,home_position_0,6,10,4.238,84.823,24953.573
+2018-09-03/2016-02-11/19_35_56,External Position,input_rc_0,125,27,4.998,1.101,224.139
+2018-09-03/2016-02-11/19_35_56,External Position,manual_control_setpoint_0,125,25,4.998,1.103,227.816
+2018-09-03/2016-02-11/19_35_56,External Position,ping_0,26,6,1.002,1.014,1016.235
+2018-09-03/2016-02-11/19_35_56,External Position,rate_ctrl_status_0,790,7,31.252,1.004,60.710
+2018-09-03/2016-02-11/19_35_56,External Position,safety_0,1130,4,42.137,1.021,24.392
+2018-09-03/2016-02-11/19_35_56,External Position,sensor_combined_0,6276,9,250.000,1.011,8.026
+2018-09-03/2016-02-11/19_35_56,External Position,sensor_preflight_0,6,3,4.907,98.185,24958.214
+2018-09-03/2016-02-11/19_35_56,External Position,system_power_0,51,9,2.000,1.020,510.005
+2018-09-03/2016-02-11/19_35_56,External Position,telemetry_status_0,26,12,1.000,1.005,1008.113
+2018-09-03/2016-02-11/19_35_56,External Position,timesync_status_0,253,4,10.007,1.061,136.873
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_air_data_0,1714,4,87.773,2.076,26.962
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_attitude_0,789,12,31.253,1.016,60.428
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_attitude_setpoint_0,248,17,9.896,1.033,105.521
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_command_0,2,14,,,
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_global_position_0,125,15,4.908,1.005,207.991
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_gps_position_0,504,22,19.994,1.041,57.486
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_land_detected_0,29,5,0.988,1.006,1020.747
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_local_position_0,248,42,9.954,1.039,104.655
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_magnetometer_0,2515,3,100.000,1.004,10.078
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_rates_setpoint_0,790,4,31.249,1.003,36.024
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_status_0,27,22,0.995,1.006,1011.814
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_status_flags_0,27,27,0.995,1.006,1011.815
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_vision_attitude_0,253,12,9.995,1.399,159.890
+2018-09-03/2016-02-11/19_35_56,External Position,vehicle_vision_position_0,253,42,9.995,1.399,159.890
+2019-01-29/17_18_55,External Position,actuator_controls_0_0,6519,9,249.875,1.023,11.911
+2019-01-29/17_18_55,External Position,actuator_outputs_0,257,17,9.581,1.109,119.811
+2019-01-29/17_18_55,External Position,actuator_outputs_1,257,17,9.855,1.027,105.940
+2019-01-29/17_18_55,External Position,battery_status_0,53,20,1.984,1.002,515.999
+2019-01-29/17_18_55,External Position,cpuload_0,27,2,0.999,1.006,1007.817
+2019-01-29/17_18_55,External Position,distance_sensor_0,257,7,9.616,1.012,107.184
+2019-01-29/17_18_55,External Position,ekf2_innovations_0,129,39,4.905,1.003,204.905
+2019-01-29/17_18_55,External Position,estimator_status_0,129,71,4.905,1.003,204.905
+2019-01-29/17_18_55,External Position,input_rc_0,129,27,4.994,1.098,227.773
+2019-01-29/17_18_55,External Position,manual_control_setpoint_0,129,25,4.994,1.099,224.236
+2019-01-29/17_18_55,External Position,mission_result_0,4,14,0.204,1.689,8653.473
+2019-01-29/17_18_55,External Position,optical_flow_0,252,15,9.614,1.009,105.549
+2019-01-29/17_18_55,External Position,ping_0,27,6,1.000,1.015,1057.913
+2019-01-29/17_18_55,External Position,position_setpoint_triplet_0,4,96,0.204,1.689,8653.472
+2019-01-29/17_18_55,External Position,rate_ctrl_status_0,825,7,31.258,1.004,32.904
+2019-01-29/17_18_55,External Position,safety_0,1178,4,42.178,1.019,24.765
+2019-01-29/17_18_55,External Position,sensor_combined_0,6519,9,250.000,1.010,12.000
+2019-01-29/17_18_55,External Position,sensor_preflight_0,6,3,4.906,100.750,25616.727
+2019-01-29/17_18_55,External Position,system_power_0,53,9,2.000,1.020,510.019
+2019-01-29/17_18_55,External Position,telemetry_status_0,27,12,1.000,1.004,1005.190
+2019-01-29/17_18_55,External Position,timesync_status_0,262,4,10.001,1.049,121.819
+2019-01-29/17_18_55,External Position,vehicle_attitude_0,824,12,31.265,1.014,33.181
+2019-01-29/17_18_55,External Position,vehicle_attitude_setpoint_0,257,17,9.960,1.039,104.879
+2019-01-29/17_18_55,External Position,vehicle_command_0,4,14,0.110,1.059,9665.514
+2019-01-29/17_18_55,External Position,vehicle_land_detected_0,28,5,0.985,1.005,1021.380
+2019-01-29/17_18_55,External Position,vehicle_local_position_0,257,42,9.987,1.042,104.814
+2019-01-29/17_18_55,External Position,vehicle_local_position_setpoint_0,236,14,9.962,1.040,104.879
+2019-01-29/17_18_55,External Position,vehicle_rates_setpoint_0,824,4,31.255,1.003,32.815
+2019-01-29/17_18_55,External Position,vehicle_status_0,30,22,0.992,1.003,1012.462
+2019-01-29/17_18_55,External Position,vehicle_status_flags_0,30,27,0.992,1.003,1012.461
+2019-01-29/17_18_55,External Position,vehicle_vision_attitude_0,151,12,17.864,2.455,5147.995
+2019-01-29/17_18_55,External Position,vehicle_vision_position_0,151,42,17.864,2.455,5147.995
+2019-01-21/07_57_00,Altitude,actuator_controls_0_0,7274,9,249.875,1.024,7.966
+2019-01-21/07_57_00,Altitude,actuator_outputs_0,287,17,9.283,1.076,119.997
+2019-01-21/07_57_00,Altitude,actuator_outputs_1,287,17,9.848,1.026,105.917
+2019-01-21/07_57_00,Altitude,battery_status_0,58,20,1.984,1.002,505.369
+2019-01-21/07_57_00,Altitude,cpuload_0,30,2,0.998,1.005,1008.051
+2019-01-21/07_57_00,Altitude,distance_sensor_0,287,7,9.842,1.024,151.077
+2019-01-21/07_57_00,Altitude,ekf2_innovations_0,144,39,4.906,1.004,205.377
+2019-01-21/07_57_00,Altitude,estimator_status_0,144,71,4.906,1.004,205.377
+2019-01-21/07_57_00,Altitude,input_rc_0,144,27,4.994,1.099,224.054
+2019-01-21/07_57_00,Altitude,manual_control_setpoint_0,144,25,4.995,1.099,224.054
+2019-01-21/07_57_00,Altitude,ping_0,30,6,0.999,1.007,1018.191
+2019-01-21/07_57_00,Altitude,position_setpoint_triplet_0,71,96,5.000,1.104,222.604
+2019-01-21/07_57_00,Altitude,rate_ctrl_status_0,919,7,31.257,1.003,32.921
+2019-01-21/07_57_00,Altitude,safety_0,1313,4,42.203,1.023,24.469
+2019-01-21/07_57_00,Altitude,sensor_combined_0,7274,9,250.000,1.011,7.990
+2019-01-21/07_57_00,Altitude,sensor_preflight_0,1,3,,,
+2019-01-21/07_57_00,Altitude,system_power_0,58,9,2.000,1.020,510.045
+2019-01-21/07_57_00,Altitude,telemetry_status_0,30,12,0.999,1.004,1008.137
+2019-01-21/07_57_00,Altitude,timesync_status_0,293,4,10.008,1.080,125.570
+2019-01-21/07_57_00,Altitude,vehicle_attitude_0,918,12,31.264,1.016,33.139
+2019-01-21/07_57_00,Altitude,vehicle_attitude_setpoint_0,287,17,9.947,1.037,104.852
+2019-01-21/07_57_00,Altitude,vehicle_command_0,3,14,0.138,1.798,13699.910
+2019-01-21/07_57_00,Altitude,vehicle_land_detected_0,30,5,0.991,1.008,1019.468
+2019-01-21/07_57_00,Altitude,vehicle_local_position_0,287,42,9.985,1.041,104.764
+2019-01-21/07_57_00,Altitude,vehicle_local_position_setpoint_0,271,14,9.952,1.038,104.726
+2019-01-21/07_57_00,Altitude,vehicle_rates_setpoint_0,919,4,31.256,1.003,32.893
+2019-01-21/07_57_00,Altitude,vehicle_status_0,30,22,0.994,1.006,1012.376
+2019-01-21/07_57_00,Altitude,vehicle_status_flags_0,30,27,0.995,1.006,1012.376
+2019-01-21/07_57_00,Altitude,vehicle_vision_attitude_0,585,12,29.038,2.908,198.058
+2019-01-21/07_57_00,Altitude,vehicle_vision_position_0,585,42,29.037,2.908,198.059
+2019-01-04/08_48_19,Global Position,actuator_controls_0_0,6263,9,249.938,1.024,12.001
+2019-01-04/08_48_19,Global Position,actuator_outputs_0,247,17,9.493,1.101,119.787
+2019-01-04/08_48_19,Global Position,actuator_outputs_1,247,17,9.851,1.026,106.342
+2019-01-04/08_48_19,Global Position,battery_status_0,51,20,1.984,1.002,504.927
+2019-01-04/08_48_19,Global Position,cpuload_0,26,2,0.999,1.008,1113.111
+2019-01-04/08_48_19,Global Position,distance_sensor_0,247,7,9.616,1.018,108.027
+2019-01-04/08_48_19,Global Position,ekf2_innovations_0,124,39,4.906,1.003,204.888
+2019-01-04/08_48_19,Global Position,estimator_status_0,124,71,4.909,1.004,205.058
+2019-01-04/08_48_19,Global Position,input_rc_0,124,27,4.999,1.101,224.350
+2019-01-04/08_48_19,Global Position,manual_control_setpoint_0,124,25,4.999,1.100,223.981
+2019-01-04/08_48_19,Global Position,mission_result_0,2,14,,,
+2019-01-04/08_48_19,Global Position,optical_flow_0,242,15,9.615,1.009,106.411
+2019-01-04/08_48_19,Global Position,ping_0,26,6,1.009,1.196,1218.729
+2019-01-04/08_48_19,Global Position,position_setpoint_triplet_0,2,96,,,
+2019-01-04/08_48_19,Global Position,rate_ctrl_status_0,791,7,31.254,1.003,32.890
+2019-01-04/08_48_19,Global Position,safety_0,1135,4,42.267,1.023,25.065
+2019-01-04/08_48_19,Global Position,sensor_combined_0,6263,9,250.000,1.010,11.974
+2019-01-04/08_48_19,Global Position,sensor_preflight_0,6,3,4.897,96.130,24488.406
+2019-01-04/08_48_19,Global Position,system_power_0,51,9,2.000,1.020,510.039
+2019-01-04/08_48_19,Global Position,telemetry_status_0,26,12,0.982,1.049,1088.497
+2019-01-04/08_48_19,Global Position,timesync_status_0,252,4,9.981,1.057,120.051
+2019-01-04/08_48_19,Global Position,vehicle_attitude_0,791,12,31.257,1.015,33.221
+2019-01-04/08_48_19,Global Position,vehicle_attitude_setpoint_0,247,17,9.945,1.037,104.973
+2019-01-04/08_48_19,Global Position,vehicle_command_0,3,14,0.107,1.821,17865.816
+2019-01-04/08_48_19,Global Position,vehicle_gps_position_0,110,22,4.034,1.016,257.147
+2019-01-04/08_48_19,Global Position,vehicle_land_detected_0,27,5,0.986,1.007,1021.374
+2019-01-04/08_48_19,Global Position,vehicle_local_position_0,247,42,9.980,1.041,104.878
+2019-01-04/08_48_19,Global Position,vehicle_local_position_setpoint_0,219,14,9.947,1.039,105.072
+2019-01-04/08_48_19,Global Position,vehicle_rates_setpoint_0,790,4,31.249,1.003,32.841
+2019-01-04/08_48_19,Global Position,vehicle_status_0,27,22,0.996,1.008,1013.405
+2019-01-04/08_48_19,Global Position,vehicle_status_flags_0,27,27,0.995,1.007,1013.404
+2019-01-04/08_48_19,Global Position,vehicle_vision_attitude_0,512,12,19.808,1.860,166.767
+2019-01-04/08_48_19,Global Position,vehicle_vision_position_0,512,42,19.808,1.860,166.767

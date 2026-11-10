@@ -1,0 +1,4 @@
+detector,fault_flights,detected,before_impact,latency_median_s,latency_max_s,margin_median_s,false_alarms,false_alarms_per_h,airborne_neg_h,frame_ap
+gbt_fast,32,32,32,0.246,0.664,1.51,0,0.0,0.7325039948509932,0.9895727995651808
+rule_tilt_err,32,32,25,1.056,2.856,0.66,0,0.0,0.7325039948509932,0.6144965718571954
+rule_lift,32,0,0,,,,0,0.0,0.7325039948509932,0.02205573275968647

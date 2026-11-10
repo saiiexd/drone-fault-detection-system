@@ -1,0 +1,21 @@
+{
+  "threshold": 0.9999714234910871,
+  "rule_thresholds": {
+    "rule_tilt_err": 57.21086883544922,
+    "rule_lift": Infinity
+  },
+  "top_features": {
+    "rate_rp__dmax": 0.3848,
+    "rate_rp__last": 0.0112,
+    "rate_rp__min": 0.0,
+    "thrust_sp__min": 0.0,
+    "yaw_rate__dmax": 0.0,
+    "tilt_err__last": 0.0,
+    "vz__delta": 0.0,
+    "rate_rp__mean": 0.0,
+    "tilt_err__mean": 0.0,
+    "thrust_sp__last": 0.0,
+    "vz__last": 0.0,
+    "m_max__last": 0.0
+  }
+}
